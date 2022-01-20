@@ -12,6 +12,7 @@ public class FPSWeapon : MonoBehaviour
     public int ammo = 10;
     public int clipSize = 10;
     public int clipCount = 5;
+    public float recoilPower = 50f;
 
     public Animation anim;
     public AnimationClip shootAnim;
@@ -38,6 +39,8 @@ public class FPSWeapon : MonoBehaviour
             {
                 anim.CrossFade(shootAnim.name);
                 ammo = ammo - 1;
+
+                fpsCam.transform.Rotate(Vector3.right, -recoilPower * Time.deltaTime);
 
                 RaycastHit hit;
                 Ray ray = fpsCam.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));

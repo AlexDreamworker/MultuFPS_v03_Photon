@@ -17,6 +17,8 @@ public class FPSController : MonoBehaviour
     public float jumpHeight = 2.0f;
     private bool grounded = false;
 
+    public GameObject graphics;
+
     public int health = 100;
 
     Rigidbody rb;

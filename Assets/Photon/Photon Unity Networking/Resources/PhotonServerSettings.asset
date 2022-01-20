@@ -45,4 +45,5 @@ MonoBehaviour:
   - TaggedPlayer
   - applyDamage
   - Die
+  - playAnimPV
   DisableAutoOpenWizard: 1

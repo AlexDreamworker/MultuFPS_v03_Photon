@@ -33,5 +33,6 @@ public class RoomManager : Photon.MonoBehaviour
         GameObject player = PhotonNetwork.Instantiate(playerPref.name, spawnPoint.position, spawnPoint.rotation, 0) as GameObject;
         player.GetComponent<FPSController>().enabled = true;
         player.GetComponent<FPSController>().fpsCam.SetActive(true);
+        player.GetComponent<FPSController>().graphics.SetActive(false);
     }
 }
